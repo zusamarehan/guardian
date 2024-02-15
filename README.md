@@ -1,8 +1,7 @@
 # Verifying Desktop sign-in via Mobile app
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/holidays.svg?style=flat-square)](https://packagist.org/packages/spatie/holidays)
-[![Tests](https://img.shields.io/github/actions/workflow/status/spatie/holidays/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/spatie/holidays/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/holidays.svg?style=flat-square)](https://packagist.org/packages/spatie/holidays)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/rehankanak/guardian.svg?style=flat-square)](https://packagist.org/packages/rehankanak/guardian)
+[![Total Downloads](https://img.shields.io/packagist/dt/rehankanak/guardian?style=flat-square)](https://packagist.org/packages/rehankanak/guardian)
 
 This Laravel package helps your application to verify a user's sign-in on a desktop browser via a mobile app. 
 It works by generating a set of options, to which the user responds via the mobile app. If the user responds correctly, then the sign-in is verified and can be authorized. 
