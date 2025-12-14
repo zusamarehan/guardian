@@ -1,17 +1,20 @@
 {
     "name": "rehankanak/guardian",
-    "description": "Laravel Package for verifying your desktop sign-in via your mobile app",
+    "description": "Laravel package for verifying desktop sign-in via a mobile app",
     "license": "MIT",
+    "type": "library",
     "keywords": [
         "laravel",
-        "guardian",
         "authentication",
         "security",
         "2fa",
         "two-factor-authentication"
     ],
-    "type": "library",
-    "minimum-stability": "stable",
+    "homepage": "https://github.com/zusamarehan/guardian",
+    "support": {
+        "issues": "https://github.com/zusamarehan/guardian/issues",
+        "source": "https://github.com/zusamarehan/guardian"
+    },
     "autoload": {
         "psr-4": {
             "RehanKanak\\Guardian\\": "src/"
@@ -30,7 +33,14 @@
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "pestphp/pest": "^2.33",
+        "orchestra/testbench": "^8.0 || ^9.0",
+        "phpstan/phpstan": "^1.11"
     },
     "extra": {
         "laravel": {
@@ -39,14 +49,13 @@
             ]
         }
     },
-    "require-dev": {
-        "laravel/pint": "^1.13",
-        "pestphp/pest": "^2.33",
-        "orchestra/testbench": "^v8.21.1"
-    },
     "scripts": {
         "format": "vendor/bin/pint",
         "test": "vendor/bin/pest",
+        "lint": [
+            "@php vendor/bin/pint",
+            "@php vendor/bin/phpstan analyse"
+        ],
         "post-autoload-dump": [
             "@clear",
             "@prepare"
@@ -58,10 +67,6 @@
             "Composer\\Config::disableProcessTimeout",
             "@build",
             "@php vendor/bin/testbench serve"
-        ],
-        "lint": [
-            "@php vendor/bin/pint",
-            "@php vendor/bin/phpstan analyse"
         ]
     },
     "config": {
